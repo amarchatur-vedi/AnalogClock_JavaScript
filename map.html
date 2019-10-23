@@ -1,0 +1,82 @@
+<html>
+<head>
+
+<style>
+body{
+
+}
+#hr1{
+	height:50px;
+	width:2px;
+	background:black;
+}
+
+#hr2{
+	height:45px;
+	width:3px;
+	background:black;
+	position:relative;
+	top:-3.7em;;
+	
+}
+#hr3{
+	height:40px;
+	width:4px;
+	background:black;
+	position:relative;
+	top:-7.1em;;
+	
+}
+
+
+img{
+	height:170px;
+	width:170px;
+	overflow:hidden;
+	position:absolute;
+	top:14.9em;
+	left:26.6em;
+}
+#clockBody{
+	position:absolute;
+	top:15em;
+	left:30em;
+	height:120px;
+	width:170px;
+	border:3px solid black;
+	padding-top:6em;
+	border-radius:50%;
+	box-shadow: 10px 10px 10px;
+	background:rgba(5,5,5,0.1);
+	background-image:url('clock.png');
+	background-size: 100% 100%;
+}
+</style>
+
+</head>
+<body>
+<div id='clockBody'>
+<hr id="hr1">
+<hr id="hr2">
+<hr id="hr3">
+</div>
+</body>
+<script>
+let secondHand = function(){
+	time = new Date();
+	secondAng = 'rotate('+(time.getSeconds()*6+180)+'deg)';
+	minuteAng = 'rotate('+((time.getMinutes()*60)*0.1+180)+'deg)';
+	hourAng = 'rotate('+((time.getHours()*3600)*0.0083+180)+'deg)';
+	document.getElementById("hr1").style.transformOrigin = "2px 2px";
+	document.getElementById("hr1").style.transform = secondAng;
+	document.getElementById("hr2").style.transformOrigin = "2px 2px";
+	document.getElementById("hr2").style.transform = minuteAng;
+	document.getElementById("hr3").style.transformOrigin = "2px 2px";
+	document.getElementById("hr3").style.transform = hourAng;
+	
+}
+
+//my();
+setInterval(secondHand,1000);
+</script>
+</html>
