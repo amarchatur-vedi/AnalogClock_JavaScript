@@ -6,25 +6,25 @@ body{
 
 }
 #hr1{
-	height:50px;
+	height:60px;
 	width:2px;
 	background:black;
 }
 
 #hr2{
-	height:45px;
+	height:55px;
 	width:3px;
 	background:black;
 	position:relative;
-	top:-3.7em;;
+	top:-4.1em;;
 	
 }
 #hr3{
-	height:40px;
+	height:50px;
 	width:4px;
 	background:black;
 	position:relative;
-	top:-7.1em;;
+	top:-8.3em;;
 	
 }
 
@@ -51,6 +51,15 @@ img{
 	background-image:url('clock.png');
 	background-size: 100% 100%;
 }
+div{
+	position:absolute;
+	top:102px;
+	left:78px;
+	height:13px;
+	width:13px;
+	background:black;
+	border-radius:50%;
+}
 </style>
 
 </head>
@@ -59,6 +68,7 @@ img{
 <hr id="hr1">
 <hr id="hr2">
 <hr id="hr3">
+<div></div>
 </div>
 </body>
 <script>
@@ -66,7 +76,7 @@ let secondHand = function(){
 	time = new Date();
 	secondAng = 'rotate('+(time.getSeconds()*6+180)+'deg)';
 	minuteAng = 'rotate('+((time.getMinutes()*60)*0.1+180)+'deg)';
-	hourAng = 'rotate('+((time.getHours()*3600)*0.0083+180)+'deg)';
+	hourAng = 'rotate('+((time.getHours()*3600)*0.0086+180)+'deg)';
 	document.getElementById("hr1").style.transformOrigin = "2px 2px";
 	document.getElementById("hr1").style.transform = secondAng;
 	document.getElementById("hr2").style.transformOrigin = "2px 2px";
