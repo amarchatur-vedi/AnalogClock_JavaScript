@@ -75,7 +75,7 @@ div{
 let secondHand = function(){
 	time = new Date();
 	secondAng = 'rotate('+(time.getSeconds()*6+180)+'deg)';
-	minuteAng = 'rotate('+((time.getMinutes()*60)*0.1+180)+'deg)';
+	minuteAng = 'rotate('+((time.getMinutes()*60)*0.09+180)+'deg)';
 	hourAng = 'rotate('+((time.getHours()*3600)*0.0086+180)+'deg)';
 	document.getElementById("hr1").style.transformOrigin = "2px 2px";
 	document.getElementById("hr1").style.transform = secondAng;
