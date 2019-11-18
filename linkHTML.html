@@ -1,0 +1,44 @@
+<html> 
+  <head> 
+	<style>
+	#main{
+		width:200px;
+	}
+	#inner{
+		position:absolute;
+		top:50%;
+		left:51.5%;
+		z-index:0;
+	}
+	#start{
+		position:fixed;
+		top:50%;
+		left:50%;
+		z-index:1;
+		width:100px;
+		transition:.5s linear;
+	}
+	#main:hover #start{
+		width:0px;
+		font-size:0px;
+	}
+	button{
+		height:30px;
+		background:black;
+		color:white;
+		border-radius:50px;
+	}
+	</style>
+  </head> 
+
+  <body> 
+    <div id="main">
+	<button id="start">S</button> 
+    <div id="inner">
+	<button id="a">A</button> 
+    <button id="b">B</button> 
+    <button id="c">C</button> 
+	</div>
+	</div>
+  </body> 
+</html>
